@@ -52,7 +52,6 @@ export default function Home() {
             let { granted } = await Location.requestForegroundPermissionsAsync()
             if (granted) {
                 let location = await Location.getCurrentPositionAsync({});
-                console.log(location);
             }
         } catch (error) {
             console.error(error)

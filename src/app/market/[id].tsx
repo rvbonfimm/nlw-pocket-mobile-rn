@@ -24,7 +24,6 @@ export default function Market() {
     const [, requestPermission] = useCameraPermissions()
     const qrLock = { current: false }
 
-    console.log(params.id)
     async function fetchMarket() {
         try {
             const { data } = await api.get(`/markets/${params.id}`)
